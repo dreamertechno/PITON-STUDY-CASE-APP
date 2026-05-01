@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { ContentState, GeneratedContent } from '../types';
+import { ContentState } from '../types';
 
 export const useContentStore = create<ContentState>()(
   persist(

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useContentStore } from '@/shared/store/useContentStore';
-import { ContentRequest, Language, Tone, SeoLevel } from '@/shared/types';
+import { ContentRequest } from '@/shared/types';
 import { Loader2, Sparkles } from 'lucide-react';
 
 export default function GeneratorForm() {

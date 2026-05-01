@@ -30,11 +30,11 @@ export async function generateContent(prompt: string): Promise<string> {
     
     // Clean JSON formatting if Gemini returned markdown block
     return text.replace(/```json/g, "").replace(/```/g, "").trim();
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Gemini API Error:", error);
 
     // Parse specific error codes if available from the Google AI SDK
-    const errorMessage = error?.message || "";
+    const errorMessage = error instanceof Error ? error.message : String(error);
     let statusCode = 500;
 
     if (errorMessage.includes("429") || errorMessage.toLowerCase().includes("quota") || errorMessage.toLowerCase().includes("rate limit")) {

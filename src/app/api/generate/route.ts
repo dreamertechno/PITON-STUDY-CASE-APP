@@ -82,7 +82,7 @@ export async function POST(req: Request) {
     let parsedData;
     try {
       parsedData = JSON.parse(cleanText);
-    } catch (parseError) {
+    } catch {
       console.error("Parse hatası. Gelen metin:", cleanText);
       return NextResponse.json({ error: "Yapay zeka geçerli bir JSON formatı döndüremedi.", details: cleanText }, { status: 500 });
     }
@@ -92,13 +92,13 @@ export async function POST(req: Request) {
       try {
         const urlObj = new URL(body.sourceValue);
         domain = urlObj.hostname.replace(/^www\./, '');
-      } catch (e) {
+      } catch {
         // ignore invalid URL
       }
     }
 
     // Add createdAt date and domain to all items
-    const finalData = parsedData.map((item: any) => ({
+    const finalData = parsedData.map((item: Record<string, unknown>) => ({
       ...item,
       createdAt: new Date().toISOString(),
       domain: domain
@@ -106,8 +106,9 @@ export async function POST(req: Request) {
 
     return NextResponse.json(finalData);
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("API Route Error:", error);
-    return NextResponse.json({ error: error.message || "İçerik üretilirken beklenmeyen bir hata oluştu." }, { status: 500 });
+    const msg = error instanceof Error ? error.message : "İçerik üretilirken beklenmeyen bir hata oluştu.";
+    return NextResponse.json({ error: msg }, { status: 500 });
   }
 }
