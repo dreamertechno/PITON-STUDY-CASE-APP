@@ -50,5 +50,6 @@ Uygulama `http://localhost:3000` adresinde çalışacaktır.
 - **Neden Tailwind CSS?** Hızlı prototipleme ve modern karanlık tema desteği.
 
 ## Ekran Görüntüleri ve Video
-- Projeye ait video kayıt linki: [VİDEO LİNKİ BURAYA EKLENECEK]
-- Ekran görüntüleri README klasörüne eklenecektir.
+Proje ile ilgili ekran görüntüleri ve tanıtım videosu **`study case media`** klasörünün içerisinde yer almaktadır.
+
+*Not: Proje videosu kaydedildikten sonra bazı geliştirmeler yapılmış ve dosya/klasör mimarisinde değişikliklere gidilmiştir. Bu nedenle videoda görünen klasör yapısı ile mevcut güncel yapı arasında ufak farklılıklar olabilir.*

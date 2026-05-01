@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import GeneratorForm from '@/features/content-generator/GeneratorForm';
-import ContentList from '@/features/content-management/ContentList';
-import ContentDetailModal from '@/features/content-management/ContentDetailModal';
+import GeneratorForm from '@/features/content-generator/components/GeneratorForm';
+import ContentList from '@/features/content-management/components/ContentList';
+import ContentDetailModal from '@/features/content-management/components/ContentDetailModal';
 import { GeneratedContent } from '@/shared/types';
 
 export default function Home() {
