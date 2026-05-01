@@ -11,6 +11,7 @@ export default function ContentList({ onSelect }: { onSelect: (content: Generate
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line
     setIsMounted(true);
   }, []);
 
