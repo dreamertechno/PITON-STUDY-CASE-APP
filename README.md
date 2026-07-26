@@ -1,6 +1,5 @@
 # SEO Blogger
-
-PITON Technology değerlendirmesi için hazırlanan yapay zeka destekli, özellik bazlı (feature-based) SEO içerik üretim ve yönetim platformu.
+Yapay zeka destekli, özellik bazlı (feature-based) SEO içerik üretim ve yönetim platformu.
 
 ## Özellikler
 
